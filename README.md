@@ -1,27 +1,23 @@
-# Lf12projekt
+# LF12 Projekt - Leistungsbewertung in der Schule - XP basiert
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
+---
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Installation
+Dieses Projekt läuft auf Angular 14.2  
+Um Angular zu benutzen wird Node.js benötigt. Die installation dafür findest du [hier](https://nodejs.org/en/).  
+Nach der installation musst du im root verzeichniss des Projektes folgende befehle ausführen :  
+- NPM packete aktualisieren : `npm install`
+---
+## Starten des Dev-Servers
+Angular bringt einen webserver mit sich. Dieser wird zum debuggen und testen benutzt.  
+Um den dev-server zu starten benötigt man auch nur einen weiteren befehl :
+- dev-server starten `ng serve`
+- dev-server im netzwerk starten `ng server --host 0.0.0.0`
+- einige editoren (z.B. PhpStorm) bieten auch GUI möglichkeiten zum ausführen
+---
+## Tests
+Angular benutzt end-to-end tests auf selenium basis.
+Die dokumentation zu dazu findest du [hier](https://angular.io/guide/testing).
+---
+## Styling
+Wir müssen nicht das rad neu erfinden und benutzen [Bootstrap 5](https://getbootstrap.com) als frontend framework.

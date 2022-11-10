@@ -1,0 +1,52 @@
+<div id="main" class="position-relative">
+    <div class="position-absolute top-50 start-50 translate-middle">
+        
+        <div id="logo" class="mb-5">
+            <img class="w-100" src="./assets/img/logo/imt_logo.png" alt="OSZ IMT">
+        </div>
+
+        <div class="window">
+            <div class="window-padding">
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" id="loginIcon">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Benutzername" aria-label="Benutzername" aria-describedby="loginIcon" formControlName="username">
+                            </div>
+                        </div>
+
+                        <div class="col">
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="input-group">
+                                <span class="input-group-text" id="passwordIcon">
+                                    <i class="bi bi-key-fill"></i>
+                                </span>
+                                <input type="password" class="form-control" placeholder="Passwort" aria-label="Passwort" aria-describedby="passwordIcon" formControlName="password">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div *ngIf="!isLoggingIn; then loginButton else loadingSpinner "></div>
+                            <ng-template #loginButton>
+                                <button type="submit" class="btn btn-primary w-100" [disabled]="!loginForm.valid" >Login</button>
+                            </ng-template>
+                            <ng-template #loadingSpinner>
+                                <app-spinner></app-spinner>
+                            </ng-template>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>

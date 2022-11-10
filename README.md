@@ -3,7 +3,7 @@
 ---
 
 ## Installation
-Dieses Projekt läuft auf Angular 14.2  
+Dieses Projekt läuft auf [Angular 14.2](https://angular.io/cli)  
 Um Angular zu benutzen wird Node.js benötigt. Die installation dafür findest du [hier](https://nodejs.org/en/).  
 Nach der installation musst du im root verzeichniss des Projektes folgende befehle ausführen :  
 - NPM packete aktualisieren : `npm install`
@@ -15,7 +15,7 @@ Um den dev-server zu starten benötigt man auch nur einen weiteren befehl :
 - dev-server im netzwerk starten `ng server --host 0.0.0.0`
 - einige editoren (z.B. PhpStorm) bieten auch GUI möglichkeiten zum ausführen
 ---
-## Tests
+## Tests  
 Angular benutzt end-to-end tests auf selenium basis.
 Die dokumentation zu dazu findest du [hier](https://angular.io/guide/testing).
 ---

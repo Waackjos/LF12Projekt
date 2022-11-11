@@ -14,7 +14,7 @@
                                 <span class="input-group-text" id="loginIcon">
                                     <i class="bi bi-person-fill"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Benutzername" aria-label="Benutzername" aria-describedby="loginIcon" formControlName="username">
+                                <input type="text" class="form-control" placeholder="Benutzername" aria-label="Benutzername" aria-describedby="loginIcon" formControlName="username" (input)="resetErrors()">
                             </div>
                         </div>
 
@@ -29,7 +29,7 @@
                                 <span class="input-group-text" id="passwordIcon">
                                     <i class="bi bi-key-fill"></i>
                                 </span>
-                                <input type="password" class="form-control" placeholder="Passwort" aria-label="Passwort" aria-describedby="passwordIcon" formControlName="password">
+                                <input type="password" class="form-control" placeholder="Passwort" aria-label="Passwort" aria-describedby="passwordIcon" formControlName="password" (input)="resetErrors()">
                             </div>
                         </div>
 
@@ -44,6 +44,10 @@
                         </div>
                     </div>
                 </form>
+
+                <div class="alert alert-danger w-100 mt-2 mb-0" role="alert" *ngIf="wrongCredentials">
+                    Login daten falsch oder nicht vorhanden
+                </div>
 
             </div>
         </div>

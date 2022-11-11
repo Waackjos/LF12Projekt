@@ -6,13 +6,18 @@ export interface IUser{
     realname    : IName,
     id          : number,
     role        : userRole,
-    progress    : ILvlStats,
-    courses     : ICourse[]
+    progress?   : ILvlStats,
+    courses?    : ICourse[]
 }
 
 export interface IName{
     surname     : string,
     lastname    : string,
+}
+
+export interface IUserLogin{
+    username    : string,
+    password    : string
 }
 
 export enum userRole{

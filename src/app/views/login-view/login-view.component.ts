@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   templateUrl: './login-view.component.html',
@@ -12,16 +13,24 @@ export class LoginViewComponent implements OnInit {
     password  : new FormControl('', Validators.required)
   });
 
-  isLoggingIn: boolean = false;
+  isLoggingIn       : boolean = false;
+  wrongCredentials  : boolean = false;
 
-  constructor() { }
+  constructor(
+    private userService : UserService
+  ) { }
 
   ngOnInit(): void {
   }
 
-  onLogin(): void{
+  async onLogin(): Promise<void>{
     this.isLoggingIn = true;
-    console.log(this.loginForm.value);
+    this.wrongCredentials = await !this.userService.login(this.loginForm.value);
+    this.isLoggingIn = false;
+  }
+
+  resetErrors(): void{
+    this.wrongCredentials = false;
   }
 
 }

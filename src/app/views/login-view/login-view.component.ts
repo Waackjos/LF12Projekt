@@ -32,7 +32,7 @@ export class LoginViewComponent implements OnInit {
    */  
   async onLogin(): Promise<void>{
     this.isLoggingIn = true;
-    this.wrongCredentials = await !this.userService.login(this.loginForm.value)
+    this.wrongCredentials = !await this.userService.login(this.loginForm.value);
     if(!this.wrongCredentials){
       this.router.navigate(['/dashboard']);
     }
